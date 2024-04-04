@@ -1,0 +1,407 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>Package Infomation</title>
+        <!--
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/button.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.5/xlsx.full.min.js"></script>
+        <script type="text/javascript" src="constants/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="constants/xlsx.full.min.js"></script>
+        <script type="text/javascript" src="constants/constants.js"></script>
+        <script type="text/javascript" src="./Bank Map.json"></script>
+        <script type="text/javascript" src="./Wafer Map.json"></script>
+        <script type="text/javascript" src="constants/constants.json"></script>
+        -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.5/xlsx.full.min.js"></script>
+        <style>
+#project {
+    font-size: 2rem;
+    font-weight: bold;
+    display:inline-block;
+    background-color: #333;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255,255,255,0.5) 2px 3px 6px;
+}
+            table {
+                font-size:12pt;
+                font-weight:bold;
+            }
+            table, th, td {
+                margin-top:20px;
+                margin-bottom:20px;
+                padding: 10px;
+            }
+            table, th {
+                border: 3px solid white;
+                border-collapse: collapse;
+            }
+            table, td {
+                border: 2px solid white;
+                border-collapse: collapse;
+            }
+            th {
+                background-color:skyblue;
+            }
+            tr.even td {
+                background-color:LightBlue;
+                color: black;
+            }
+            tr.odd td {
+                background-color:lightcyan;
+                color: black;
+            }
+            td.content {
+                align:left;
+            }
+        </style>
+    </head>
+
+    <body>
+        <center>
+        <div id="project"></div></br></br>
+        <div id='NewSTA' style='display:none;'>
+        <div style="font-weight:bold;"><i>AVDD=5.0V, AVSS=0 to -2.5V, DVDD=3.3V, DVSS=0V, and TA = +25&#8451;, unless otherwise noticed.</i></div>
+        <table>
+			<th width='100'></th><th width='200'>Contents</th><th>STA-10</th><th>STA-20</th><th>STA-N</th><th>STA-3X</th><th>STA-XF</th>
+            <tr class='even' align='center'>
+                <td rowspan="4">Dimension</td>
+                <td class='content'># of Channel</td>
+                <td class="STA-10">32</td>
+                <td class="STA-20">64</td>
+                <td class="STA-N">64</td>
+                <td class="STA-3X">128</td>
+                <td class="STA-XF">128</td>
+            </tr>
+            <tr class='odd' align='center'>
+                <!--
+                <td></td>
+                -->
+                <td class='content'>Package</td>
+                <td class="STA-10">81 FC-BGA</td>
+                <td class="STA-20">180 FC-BGA</td>
+                <td class="STA-N">96 FC-BGA</td>
+                <td class="STA-3X">225 FBGA</td>
+                <td class="STA-XF">225 FBGA</td>
+            </tr>
+            <tr class='even' align='center'>
+                <!--
+                <td></td>
+                -->
+                <td class='content'>Package Size</td>
+                <td class="STA-10">12 x 12(㎟)</td>
+                <td class="STA-20">12 x 12(㎟)</td>
+                <td class="STA-N">9 x 9(㎟)</td>
+                <td class="STA-3X">12 x 12(㎟)</td>
+                <td class="STA-XF">10 x 10(㎟)</td>
+            </tr>
+            <tr class='odd' align='center'>
+                <!--
+                <td></td>
+                -->
+                <td class='content'>Ball Pitch</td>
+                <td class="STA-10">1.3 P</td>
+                <td class="STA-20">0.8 P</td>
+                <td class="STA-N">0.8 P</td>
+                <td class="STA-3X">0.8 P</td>
+                <td class="STA-XF">0.65 P</td>
+            </tr>
+            <tr class='even' align='center'>
+                <td rowspan="6">Electrical Spec.</td>
+                <td class='content'>Leakage Current(max)</td>
+                <td class="STA-10">0.1 ㎂</td>
+                <td class="STA-20">1 ㎂</td>
+                <td class="STA-N">1 ㎂</td>
+                <td class="STA-3X">0.1 ㎂</td>
+                <td class="STA-XF">1 ㎂</td>
+            </tr>
+            <tr class='odd' align='center'>
+                <!--
+                <td></td>
+                -->
+                <td class='content'>Ron resistance</td>
+                <td class="STA-10">&lt; 1&#8486;</td>
+                <td class="STA-20">&lt; 3&#8486;</td>
+                <td class="STA-N">&lt; 3&#8486;</td>
+                <td class="STA-3X">&lt; 15&#8486;</td>
+                <td class="STA-XF">&lt; 2.8&#8486;</td>
+            </tr>
+            <tr class='even' align='center'>
+                <!--
+                <td></td>
+                -->
+                <td class='content'>Design Spec. capacitance</td>
+                <td class="STA-10">600 ㎊</td>
+                <td class="STA-20">300 ㎊</td>
+                <td class="STA-N">300 ㎊</td>
+                <td class="STA-3X">10 ㎊</td>
+                <td class="STA-XF">300 ㎊</td>
+            </tr>
+            <tr class='odd' align='center'>
+                <!--
+                <td></td>
+                -->
+                <td class='content'>Max On-Switch Current per Channel</td>
+                <td class="STA-10">400 ㎃</td>
+                <td class="STA-20">50 ㎃</td>
+                <td class="STA-N">50 ㎃</td>
+                <td class="STA-3X">50 ㎃</td>
+                <td class="STA-XF">50 ㎃</td>
+            </tr>
+            <tr class='even' align='center'>
+                <!--
+                <td></td>
+                -->
+                <td class='content'>Operation Current (@10Mhz CLK) I<sub style="font-size:8pt;">DVDD</sub>/I<sub style="font-size:8pt;">AVDD</sub></td>
+                <td class="STA-10">3㎃ / 50㎃</td>
+                <td class="STA-20">6㎃ / 50㎃</td>
+                <td class="STA-N">6㎃ / 50㎃</td>
+                <td class="STA-3X">15㎃ / 50㎃</td>
+                <td class="STA-XF">15㎃ / 100㎃</td>
+            </tr>
+            <tr class='odd' align='center'>
+                <!--
+                <td></td>
+                -->
+                <td class='content'>Switch In/Out Voltage Range</td>
+                <td class="STA-10">0 ~ 5V</br>-2.5 ~ 7V</td>
+                <td class="STA-20">0 ~ 5V</br>-2.5 ~ 7V</td>
+                <td class="STA-N">0 ~ 5V</br>-2.5 ~ 7V</td>
+                <td class="STA-3X">??? 0 ~ 5V</br>-2.5 ~ 7V</td>
+                <td class="STA-XF">0 ~ 5V</br>-2.5 ~ 7V</td>
+            </tr>
+        </table>
+        </div>
+
+        <div id='OldSTA' style='display:none;'>
+        <div style="font-weight:bold;"><i>AVDD=5.0V, AVSS=0V, DVDD=3.3V, DVSS=0V, and TA = +25&#8451;, unless otherwise noticed.</i></div>
+        <table>
+			<th width='100'></th><th width='200'>Contents</th><th>STA-1.01A</th><th>STA-2</th><th>STA-2.01</th><th>STA-3B</th><th>STA-FX</th>
+			<th class="STA-FX2">STA-FX2</th>
+			<th class="STA-FX3">STA-FX3</th>
+            <tr class='even' align='center'>
+                <td rowspan="4">Dimension</td>
+                <td class='content'># of Channel</td>
+                <td class="STA-101A">32</td>
+                <td class="STA-2">64</td>
+                <td class="STA-201">64</td>
+                <td class="STA-3B">64</td>
+                <td class="STA-FX">128</td>
+                <td class="STA-FX2">128</td>
+                <td class="STA-FX3">128</td>
+            </tr>
+            <tr class='odd' align='center'>
+                <!--
+                <td></td>
+                -->
+                <td class='content'>Package</td>
+                <td class="STA-101A">81 FBGA</td>
+                <td class="STA-2">180 FBGA</td>
+                <td class="STA-201">180 FBGA</td>
+                <td class="STA-3B">180 FBGA</td>
+                <td class="STA-FX">360 FBGA</td>
+                <td class="STA-FX2">289 FBGA</td>
+                <td class="STA-FX3">FBGA</td>
+            </tr>
+            <tr class='even' align='center'>
+                <!--
+                <td></td>
+                -->
+                <td class='content'>Package Size</td>
+                <td class="STA-101A">12 x 12(㎟)</td>
+                <td class="STA-2">12 x 12(㎟)</td>
+                <td class="STA-201">12 x 12(㎟)</td>
+                <td class="STA-3B">12 x 12(㎟)</td>
+                <td class="STA-FX">12 x 12(㎟)</td>
+                <td class="STA-FX2">12 x 12(㎟)</td>
+                <td class="STA-FX3">12 x 12(㎟)</td>
+            </tr>
+            <tr class='odd' align='center'>
+                <!--
+                <td></td>
+                -->
+                <td class='content'>Ball Pitch</td>
+                <td class="STA-101A">1.3 P</td>
+                <td class="STA-2">0.8 P</td>
+                <td class="STA-201">0.8 P</td>
+                <td class="STA-3B">0.8 P</td>
+                <td class="STA-FX">0.5 P</td>
+                <td class="STA-FX2">0.65 P</td>
+                <td class="STA-FX3">0.8 P</td>
+            </tr>
+            <tr class='even' align='center'>
+                <td rowspan="6">Electrical Spec.</td>
+                <td class='content'>Leakage Current(max)</td>
+                <td class="STA-101A">1 ㎂</td>
+                <td class="STA-2">1 ㎂</td>
+                <td class="STA-201">1 ㎂</td>
+                <td class="STA-3B">1 ㎂</td>
+                <td class="STA-FX">1 ㎂</td>
+                <td class="STA-FX2">1 ㎂</td>
+                <td class="STA-FX3">1 ㎂</td>
+            </tr>
+            <tr class='odd' align='center'>
+                <!--
+                <td></td>
+                -->
+                <td class='content'>Ron resistance</td>
+                <td class="STA-101A">&lt; 1&#8486;</td>
+                <td class="STA-2">&lt; 3&#8486;</td>
+                <td class="STA-201">&lt; 3&#8486;</td>
+                <td class="STA-3B">&lt; 15&#8486;</td>
+                <td class="STA-FX">&lt; 3&#8486;</td>
+                <td class="STA-FX2">&lt; 3&#8486;</td>
+                <td class="STA-FX3">&lt; 3&#8486;</td>
+            </tr>
+            <tr class='even' align='center'>
+                <!--
+                <td></td>
+                -->
+                <td class='content'>Design Spec. capacitance</td>
+                <td class="STA-101A">600 ㎊</td>
+                <td class="STA-2">300 ㎊</td>
+                <td class="STA-201">300 ㎊</td>
+                <td class="STA-3B">10 ㎊</td>
+                <td class="STA-FX">300 ㎊</td>
+                <td class="STA-FX2">300 ㎊</td>
+                <td class="STA-FX3">300 ㎊</td>
+            </tr>
+            <tr class='odd' align='center'>
+                <!--
+                <td></td>
+                -->
+                <td class='content'>Max On-Switch Current per Channel</td>
+                <td class="STA-101A">200 ㎃</td>
+                <td class="STA-2">50 ㎃</td>
+                <td class="STA-201">50 ㎃</td>
+                <td class="STA-3B">50 ㎃</td>
+                <td class="STA-FX">50 ㎃</td>
+                <td class="STA-FX2">50 ㎃</td>
+                <td class="STA-FX3">50 ㎃</td>
+            </tr>
+            <tr class='even' align='center'>
+                <!--
+                <td></td>
+                -->
+                <td class='content'>Operation Current (@10Mhz CLK) I<sub style="font-size:8pt;">DVDD</sub>/I<sub style="font-size:8pt;">AVDD</sub></td>
+                <td class="STA-101A">400㎂ / 50㎃</td>
+                <td class="STA-2">400㎂ / 50㎃</td>
+                <td class="STA-201">400㎂ / 50㎃</td>
+                <td class="STA-3B">400㎂ / 30㎃</td>
+                <td class="STA-FX">800㎂ / 100㎃</td>
+                <td class="STA-FX2">800㎂ / 100㎃</td>
+                <td class="STA-FX3">800㎂ / 100㎃</td>
+            </tr>
+            <tr class='odd' align='center'>
+                <!--
+                <td></td>
+                -->
+                <td class='content'>Switch In/Out Voltage Range</td>
+                <td class="STA-101A">0 ~ 5V</td>
+                <td class="STA-2">0 ~ 5V</td>
+                <td class="STA-201">-2.5 ~ +2.5V</br>0 ~ 5V</td>
+                <td class="STA-3B">0 ~ 5V</td>
+                <td class="STA-FX">-2.5 ~ +2.5V</br>0 ~ 5V</td>
+                <td class="STA-FX2">-2.5 ~ +2.5V</br>0 ~ 5V</td>
+                <td class="STA-FX3">-2.5 ~ +2.5V</br>0 ~ 5V</td>
+            </tr>
+        </table>
+        </div>
+
+        <div id='tooltip' style='position:absolute; display:none;'></div>
+        <div id='svgContainer' name='container' align="center"></div>
+        </center>
+
+
+        <script type="text/javascript">
+			/*
+			const specs = [
+						{	"Device":"STA-10",
+							"Channel":"64",
+							"PackageType":"96 FC-BGA",
+							"PackageSize":"9 x 9(㎟)",
+							"Ball":"0.8 P",
+							"Leackage":"1 ㎂",
+						}
+					];
+			*/
+
+            function getUrlParams() {
+                var params = {};
+                window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) { params[key] = value; });
+                return params;
+            }
+
+//            $(document).ready(function(){
+            $(function(){
+//                console.log(`Window position : (${window.screenX}, ${window.screenY}), size : ${window.innerWidth} x ${window.innerHeight}`);
+
+                var oParams = getUrlParams();
+                var Type, deviceName;
+                console.log(`oParams = ${oParams}, ${JSON.stringify(oParams)}`);
+                if( jQuery.isEmptyObject(oParams) ) {       // URL parameter가 없는 경우.
+                    if( window.location.protocol === 'file:' ) {        // local html file open.
+                        Type = JSON.parse(localStorage.getItem('Type'));
+                    } else {                                            // web server url open.
+                        Type = (opener === null) ? 0 : opener.Type;
+                    }
+                } else {                                    // URL parameter
+                    Type = oParams.Type;
+					deviceName = oParams.deviceName;
+                }
+                console.log('Device Type : ', Type, ", Name : ", deviceName);
+
+
+				$(".STA-FX2").css("display", "none");
+				$(".STA-FX3").css("display", "none");
+                if( Type == 'OldSTA') {
+                    $('#project').text('STAx IC Spec. Overview');
+                    $('#OldSTA').css('display', 'inline-block');
+                    $('#NewSTA').css('display', 'none');
+                } else if( Type == 'NewSTA') {
+                    $('#project').text('New STAx IC Spec. Overview');
+                    $('#OldSTA').css('display', 'none');
+                    $('#NewSTA').css('display', 'inline-block');
+                } else if( Type == 'PS') {
+                }
+
+
+                // 브라우저의 Window 크기에 맞추어서 svg영역을 재설정한다.
+                var w = $(window).width();
+                var h = $(window).height();
+//                console.log(`window size : (${w} x ${h})`);
+
+                $('#ProbeCard').width(w-30);
+                $('#ProbeCard').height(h-100);
+//                console.log(`inner size : ${$('#ProbeCard').innerWidth()} x ${$('#ProbeCard').innerHeight()}`);
+//                console.log(`rect width = ${$('#Card').width()}`);
+//                console.log('SelectedDut : ', SelectedDut);
+
+				// '.' 문자 제거
+				console.log("deviceName = ", deviceName);
+				deviceName = deviceName.replace(".", "");
+				console.log("deviceName = ", deviceName);
+				$(`.${deviceName}`).css("color", "red");
+            });
+
+            // 브라우저 windows의 크기를 변경하면 Call된다.
+            $(window).resize( function() {
+                var w = $(window).width();
+                var h = $(window).height();
+
+                $("#ProbeCard").width(w-30);
+                $("#ProbeCard").height(h-100);
+
+//            console.log(`inner size : ${$('#ProbeCard').innerWidth()} x ${$('#ProbeCard').innerHeight()}`);
+            });
+
+        </script>
+    </body>
+</html>
+

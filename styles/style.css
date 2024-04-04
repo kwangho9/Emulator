@@ -1,0 +1,575 @@
+
+/********************************************************************
+ * basic.html에서 사용된 style
+ */
+body {
+    background-color: lightblue;
+}
+
+#tooltip {
+    opacity: "3";
+    font-family: verdana;
+    font-weight: bold;
+    font-size: 10px;
+    color:#000;
+    z-index: 1;
+    background-color: cornsilk;
+/*    background: rgb(103, 243, 37); */
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    display: none;
+    position: absolute;
+}
+
+.input-file-button {
+    padding: 0px 20px;
+    background-color:#FF6600;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+#selectDutNumber {
+    display:none;
+}
+
+input[type=number].digit3{
+    width:40px;
+    border-radius:5px;
+    display:inline-block;
+}
+input[type=number].digit4{
+    width:50px;
+    border-radius:5px;
+    display:inline-block;
+}
+
+
+/********************************************************************
+ * BankMap.html에서 사용된 style
+ */
+.channels {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/*
+#project {
+    text-align: center;
+    font-size:200%;
+    font-weight: bold;
+    display:inline-block;
+}
+*/
+#project {
+    font-size: 2rem;
+    font-weight: bold;
+    display:inline-block;
+    background-color: #333;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255,255,255,0.5) 2px 3px 6px;
+}
+
+/*
+*/
+.labeltext::before {
+    width: 100px;
+    height: 60px;
+}
+.labeltext {
+    font-size: 12px;
+    font-weight: bold;
+    display:inline-block;
+    background-color: #333;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255,255,255,0.5) 2px 3px 6px;
+}
+
+/*
+#BankMap {
+    position:relative;
+    text-align:center;
+}
+*/
+
+.CHIPText {
+    /*
+    font-weight: bold;
+    */
+    dominant-baseline: middle;
+    text-anchor: middle;
+}
+.BANKText {
+    font-size: 14px;
+    font-weight: bold;
+    dominant-baseline: middle;
+    text-anchor: middle;
+}
+.CSNText {
+    font-size: 10px;
+    font-weight: bold;
+    dominant-baseline: middle;
+    text-anchor: middle;
+}
+.select3 {
+    border-radius: 5px;
+}
+/*
+.GROUP {
+    stroke: black;
+    stroke-width: 1;
+}
+*/
+table {
+    border:0px solid red;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+div#CmdInput {
+    visibility: hidden;
+}
+
+fieldset {
+    display: block;
+    border-radius: 5px;
+}
+
+/*
+*/
+select#SECCmd {
+    width: 150px;
+    border-radius: 5px;
+    background-color: lightyellow;
+}
+optgroup {
+    background-color: deepskyblue;
+}
+.AllChip {
+    background-color:#FFCD28;
+}
+.SingleChip {
+    background-color:#68D168;
+}
+.MultiChip {
+    background-color:#E97FE5;
+}
+div#ChipField,
+div#MultiField,
+div#Ctrl1Field,
+div#Ctrl2Field,
+div#Ctrl3Field,
+div#DataField,
+div#AddrField,
+div#CtrlField {
+    display: none;
+}
+button#SendCommand {
+    height: 40px;
+}
+input#ChipNo,
+input#HexInput,
+input#DecInput,
+input#AddrInput {
+    width: 60px;
+}
+
+
+/********************************************************************
+ * CommandList.html 에서 사용된 style
+ */
+
+option.color1 {
+    background-color: #FFCD28;
+}
+option.color2 {
+    background-color: #E97FE5;
+}
+option.color3 {
+    background-color: #68D168;
+}
+option.color4 {
+    background-color: #FFA887;
+}
+div.hidden {
+    display: block;
+    visibility: hidden;
+}
+select#sourceCmd {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    width: 200px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size:10pt;
+    height:326px;
+}
+select#sourceCmd::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+input.width60 {
+    width: 60px;
+    border-radius: 5px;
+}
+.button.width100 {
+    width: 100px;
+}
+.width58 {
+    width: 58px;
+}
+select#targetCmd {
+    resize: none;
+    width: 300px;
+    border-radius: 5px;
+    font-size:10pt;
+    height:326px;
+}
+select#targetCmd::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+/*
+select {
+    font-size:10pt;
+    height:326px;
+}
+*/
+
+/********************************************************************
+ * BankMap.html에서 사용된 style
+ * text-shadow : https://www.sitepoint.com/moonlighting-css-text-shadow/
+ */
+.svgText {
+  color: transparent;
+  dominant-baseline: middle;
+  text-anchor: middle;
+  display: inline-block;
+  margin: auto;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+  font-size: 80%;
+  font-family: consolas;
+  font-weight: bold;
+  /*
+  text-align: center;
+  stroke-width: 1px;
+  stroke: gray;
+  */
+}
+
+.color1 {
+  stroke: #F08000;
+}
+
+.color2 {
+  stroke: green;
+}
+
+.color3 {
+  stroke: blue;
+}
+
+.color4 {
+  stroke: red;
+}
+
+.color5 {
+  stroke: black;
+}
+
+/*
+.PMICText::before {
+    width: 100px;
+    height: 60px;
+}
+
+.PMICText {
+    font-size: 16px;
+    font-weight: bold;
+    dominant-baseline: middle;
+    text-anchor: middle;
+}
+*/
+
+.centerText {
+    font-size: 12px;
+    font-weight: bold;
+    dominant-baseline: middle;
+    text-anchor: middle;
+}
+
+.effect {
+    font-weight: bold;
+    dominant-baseline: middle;
+    text-anchor: middle;
+    -webkit-filter: drop-shadow( 1px 1px 2px rgba(100, 100, 100, .7));
+    filter: drop-shadow( 1px 1px 2px rgba(100, 100, 100, .7));
+    /*
+    font-family: "Arial Black", Gadget, sans-serif;
+        text-shadow: 0px 0px 0 rgb(185,123,0),
+                 1px 1px  0 rgb(115,53,0),
+                 2px 2px 1px rgba(0,0,0,0),
+                 2px 2px 1px rgba(0,0,0,0.5),
+                 0px 0px 1px rgba(0,0,0,.2);
+    */
+}
+.spiText {
+    font-size: 16px;
+    fill: green;
+}
+.chipText {
+    font-size: 16px;
+    fill: black;
+}
+.dutText {
+    font-size: 12px;
+    fill: black;
+}
+.ppsText {
+    font-size: 14px;
+}
+
+.centerAlign {
+    font-weight: bold;
+    dominant-baseline: middle;
+    text-anchor: middle;
+}
+/*
+.centerAlign {
+    font-weight: bold;
+    dominant-baseline: middle;
+    text-anchor: middle;
+    -webkit-filter: drop-shadow( 1px 1px 2px rgba(100, 100, 100, .7));
+    filter: drop-shadow( 1px 1px 2px rgba(100, 100, 100, .7));
+}
+.FLAG {
+    stroke: black;
+    stroke-width: 1;
+//    fill: transparent;
+}
+.normalSVG {
+    stroke: black;
+    stroke-width: 1;
+}
+.smallText {
+    font-size: 8px;
+    font-weight: bold;
+    dominant-baseline: middle;
+    text-anchor: middle;
+}
+*/
+.greenStroke {
+    stroke:green;
+    stroke-width:3;
+    opacity:1;
+}
+rect.SP2003 {
+    stroke: black;
+    stroke-width: 2;
+    fill: transparent;
+}
+text.green {
+    fill: green;
+}
+text.gray {
+    font-size: 12px;
+    fill: gray;
+}
+rect.PMIC {
+    stroke: black;
+    stroke-width: 1;
+    fill: transparent;
+}
+.channelText {
+    font-size: 10px;
+    font-weight: bold;
+    dominant-baseline: middle;
+    text-anchor: middle;
+    fill: gray;
+}
+rect.DUT {
+    /*
+    stroke: black;
+    stroke-width: 2;
+    */
+    fill: transparent;
+}
+rect.EVC,
+rect.VCCQ {
+    stroke: black;
+    stroke-width: 1;
+}
+
+
+
+/************************************************************************************
+ * select style
+ */
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+  top:10px;
+  overflow: hidden;
+  height: 24px;
+  /*
+  width: 80px;
+  */
+  background: #f2f2f2;
+  /*
+  background: red;
+      */
+  border: 1px solid;
+  border-color: white #f7f7f7 whitesmoke;
+  border-radius: 3px;
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.06));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.dropdown:before, .dropdown:after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 9px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 4px dashed;
+  border-color: #888888 transparent;
+  pointer-events: none;
+}
+
+.dropdown:before {
+  border-bottom-style: solid;
+  border-top: none;
+}
+
+.dropdown:after {
+  margin-top: 7px;
+  border-top-style: solid;
+  border-bottom: none;
+}
+
+.dropdown-select {
+  position: relative;
+  width: 130%;
+  margin: 0;
+  padding: 6px 8px 6px 10px;
+  height: 24px;
+  line-height: 14px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #62717a;
+  text-shadow: 0 1px white;
+  background: #f2f2f2;
+  background: rgba(0, 0, 0, 0) !important;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.dropdown-select:focus {
+  z-index: 3;
+  width: 100%;
+  color: #394349;
+  outline: 2px solid #49aff2;
+  outline: 2px solid -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.dropdown-select > option {
+  margin: 3px;
+  padding: 6px 8px;
+  text-shadow: none;
+  background: #f2f2f2;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.lt-ie9 .dropdown {
+  z-index: 1;
+}
+
+.lt-ie9 .dropdown-select {
+  z-index: -1;
+}
+
+.lt-ie9 .dropdown-select:focus {
+  z-index: 3;
+}
+
+@-moz-document url-prefix() {
+  .dropdown-select {
+    padding-left: 6px;
+  }
+}
+
+.dropdown-dark {
+  background: #444;
+  border-color: #111111 #0a0a0a black;
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+  background-image: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+  background-image: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.4));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-dark:before {
+  border-bottom-color: #aaa;
+}
+
+.dropdown-dark:after {
+  border-top-color: #aaa;
+}
+
+.dropdown-dark .dropdown-select {
+  color: #aaa;
+  text-shadow: 0 1px black;
+  background: #444;
+}
+
+.dropdown-dark .dropdown-select:focus {
+  color: #ccc;
+}
+
+.dropdown-dark .dropdown-select > option {
+  background: #444;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+}
+
+/**********************************************************
+ * input number style
+ */
+.input-number {
+    background-color:Lavender;
+    border-radius:4px;
+    height:18px;
+    /*
+    padding: 0px 12px 8px;
+    */
+    margin-top: 2px;        /* input box의 Top margin은 결정한다.(input box를 아래로 내리는 효과) */
+    position: relative;
+    text-align: center;     /* input box 안의 text를 정렬한다. */
+    font-size: 12px;        /* input box 안의 text size를 결정한다. */
+    vertical-align: middle; /* 사각 박스의 위치를 결정한다.
+}
+
